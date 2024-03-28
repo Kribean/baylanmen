@@ -2,14 +2,14 @@ from django.db import models
 
 class Rimed(models.Model):
     scientific_name = models.CharField(max_length=255)
-    vernacular_names = models.JSONField()
+    vernacular_names = models.CharField(max_length=255)
     botanical_family = models.CharField(max_length=255)
     dosage = models.TextField()
     description = models.TextField()
-    parts_used = models.JSONField()
+    parts_used = models.CharField(max_length=255)
     toxicity_rating = models.IntegerField()
     efficacy_rating = models.IntegerField()
-    countries_found = models.JSONField()
+    countries_found = models.CharField(max_length=255)
     not_for_children = models.BooleanField()
     not_for_elderly = models.BooleanField()
     not_for_pregnant_women = models.BooleanField()
